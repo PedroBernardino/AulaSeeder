@@ -15,6 +15,7 @@ class AulaController extends Controller
         $aula->materia = $request->materia;
         $aula->instituto = $request->instituto;
         $aula->curso = $request->curso;
+        $aula->codigo = $request->codigo;
         $aula->save();
 
         return response()->success($aula);
@@ -31,6 +32,8 @@ class AulaController extends Controller
             $aula->professor = $request->professor;
         if($request->materia)
             $aula->materia = $request->materia;
+        if($request->codigo)
+            $aula->codigo = $request->codigo;
         if($request->instituto)
             $aula->instituto = $request->instituto;
         if($request->curso)
